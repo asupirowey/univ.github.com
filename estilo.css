@@ -713,35 +713,25 @@ footer .arriba{
     }
 }
 
-/* Media query para pantallas más pequeñas */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+/*desplegable*/
+nav ul ul {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute; /* Permite posicionar el submenú */
+    top: 100%; /* Lo coloca debajo del elemento padre */
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    white-space: nowrap; /* Evita que el texto del submenú se rompa en varias líneas */
+}
 
-    nav ul li {
-        margin: 10px 0;
-    }
+nav ul li:hover > ul {
+    display: block; /* Muestra el submenú al pasar el ratón sobre el <li> padre */
+}
 
-    nav ul ul {
-        position: static;
-        box-shadow: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul ul li {
-        display: block;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    input[type="number"],
-    button {
-        width: 90%;
-        max-width: none;
-    }
+nav ul ul li {
+    display: block; /* Hace que los elementos del submenú se apilen verticalmente */
+    margin: 5px 0;
 }
