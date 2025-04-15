@@ -523,27 +523,35 @@ html{
 }
 
 /*desplegable*/
-.nav .ul .ul {
-    display: none; /* Oculta el submenú por defecto */
-    position: absolute; /* Permite posicionar el submenú */
-    top: 100%; /* Lo coloca debajo del elemento padre */
+.nav .ul .ul.dropdown-menu {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    top: 100%; /* Desplegar hacia abajo */
     left: 0;
     background-color: #333;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* Asegura que esté por encima de otros elementos */
-    white-space: nowrap; /* Evita que el texto del submenú se rompa en varias líneas */
+    z-index: 1;
+    white-space: nowrap;
 }
 
-.nav .ul .li:hover > ul {
-    display: block; /* Muestra el submenú al pasar el ratón sobre el <li> padre */
+.nav .ul .li.dropdown {
+    position: relative; /* Necesario para posicionar el submenú absolutamente dentro */
 }
 
-.nav .ul .ul .li {
-    display: block; /* Hace que los elementos del submenú se apilen verticalmente */
+.nav .ul .ul.dropdown-menu li {
+    display: block;
     margin: 5px 0;
 }
+
+/* Opcional: Estilos para el enlace "Mis Proyectos" para indicar que es desplegable */
+.nav .a.dropdown-toggle::after {
+    content: '\25BE'; /* Carácter de flecha hacia abajo */
+    margin-left: 5px;
+}
+
+
 
 /* SECCION CONTACTO */
 .contacto{
