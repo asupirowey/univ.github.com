@@ -522,34 +522,7 @@ html{
     margin-bottom: 0px;
 }
 
-/*desplegable*/
-.nav .ul .ul .dropdown-menu {
-    display: none; /* Ocultar por defecto */
-    position: absolute;
-    top: 100%; /* Desplegar hacia abajo */
-    left: 0;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    white-space: nowrap;
-}
-
-.nav .ul .li .dropdown {
-    position: relative; /* Necesario para posicionar el submenú absolutamente dentro */
-}
-
-.nav .ul .ul .dropdown-menu .li {
-    display: block;
-    margin: 5px 0;
-}
-
-/* Opcional: Estilos para el enlace "Mis Proyectos" para indicar que es desplegable */
-.nav .a .dropdown-toggle::after {
-    content: '\25BE'; /* Carácter de flecha hacia abajo */
-    margin-left: 5px;
-}
+/*aqui va el menu desplegable*/
 
 
 
