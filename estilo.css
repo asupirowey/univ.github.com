@@ -523,7 +523,7 @@ html{
 }
 
 /*desplegable*/
-.nav .ul .ul.dropdown-menu {
+.nav .ul .ul .dropdown-menu {
     display: none; /* Ocultar por defecto */
     position: absolute;
     top: 100%; /* Desplegar hacia abajo */
@@ -536,17 +536,17 @@ html{
     white-space: nowrap;
 }
 
-.nav .ul .li.dropdown {
+.nav .ul .li .dropdown {
     position: relative; /* Necesario para posicionar el submenú absolutamente dentro */
 }
 
-.nav .ul .ul.dropdown-menu li {
+.nav .ul .ul .dropdown-menu .li {
     display: block;
     margin: 5px 0;
 }
 
 /* Opcional: Estilos para el enlace "Mis Proyectos" para indicar que es desplegable */
-.nav .a.dropdown-toggle::after {
+.nav .a .dropdown-toggle::after {
     content: '\25BE'; /* Carácter de flecha hacia abajo */
     margin-left: 5px;
 }
